@@ -396,3 +396,32 @@ footer .pr {display: block;}
 	.pc {display: block;}
 
 	}/*追加指定ここまで*/
+
+
+
+
+.profile {  
+  display: flex;  
+  justify-content: center;  
+  width: 500px;  
+  border: 1px solid #888;  
+  border-radius: 7px;  
+  padding: 1em;  
+  background: #eef;  
+}  
+.profile .left img {  
+  width: 200px;  
+  border-radius: 7px;  
+}  
+.profile .left {  
+  margin-right: 1em;  
+}  
+.profile .right p {  
+  text-indent: 1em;  
+}  
+
+
+
+
+
+
