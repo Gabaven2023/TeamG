@@ -421,7 +421,48 @@ footer .pr {display: block;}
 }  
 
 
+.btn-circle-3d {
+  display: inline-block;
+  text-decoration: none;
+  background: #ff8181;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+}
 
 
 
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 36px;
+	height: 36px;
+	background: #aaa;
+	color: #fff;
+	border-radius:50%;
+	font-size: 1.0rem;
+	cursor: pointer;
+}
+.btn:before {
+	content: 'OFF';
+}
+.checkbox {
+	display: none;
+}
+/*以下を追記*/
+.checkbox:checked+.btn {
+	background: #1ad33a;
+}
+.checkbox:checked+.btn:before {
+	content: 'ON';
+}
 
