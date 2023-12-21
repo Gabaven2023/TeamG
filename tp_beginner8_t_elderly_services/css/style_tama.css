@@ -58,7 +58,7 @@ nav {margin: 0;padding: 0;}
 table {border-collapse:collapse;}
 
 /*画像全般の設定*/
-img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+/* img {border: none;max-width: 100%;height: auto;vertical-align: middle;} */
 
 /*videoタグ*/
 video {max-width: 100%;}
@@ -400,5 +400,5 @@ footer .pr {display: block;}
 
 /* 画面幅の50%の幅で画像を表示 */
 .image-vw {
-	width : 25vw ; 
+	/* width : 25vw ;  */
   }
