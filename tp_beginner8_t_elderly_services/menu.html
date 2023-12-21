@@ -42,98 +42,37 @@
     
     
     
-    
-<style>  
-.profile {  
-  display: flex;  
-  justify-content: center;  
-  width: 500px;  
-  border: 1px solid #888;  
-  border-radius: 7px;  
-  padding: 1em;  
-  background: #eef;  
-}  
-.profile .left img {  
-  width: 200px;  
-  border-radius: 7px;  
-}  
-.profile .left {  
-  margin-right: 1em;  
-}  
-.profile .right p {  
-  text-indent: 1em;  
-}  
-</style>  
+<style>
+    /* CSSでデザインを整える */
+    textarea {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <!-- テキストエリアとボタンを作成 -->
+  <textarea id="memo"></textarea>
+  <button id="save">保存</button>
+  <button id="load">読み込み</button>
 
- <div class="profile">  
-  <div class="left">  
-    <img src="images/sample.webp"/>  
-  </div>  
-  <div class="right">  
-    <strong>ホームページ太郎</strong> 
-    
-      
-    <input type="checkbox" id="btn01" class="checkbox">
-    <label for="btn01" class="btn"></label>
+  <script>
+    // テキストエリアとボタンの要素を取得
+    const memo = document.getElementById("memo");
+    const save = document.getElementById("save");
+    const load = document.getElementById("load");
 
-      
-      
-    <p>こんにちは。ホームページ太郎です。</p>  
-    <p>私はホームページを作るのが趣味です。HTML/CSS/JavaScriptなどを扱えます。パソコン歴は20年です。</p>  
-    <p>最近の趣味は筋トレとサイクリングです。筋トレを始めてから身体の調子が良いですね。体重も落とすことができました。</p>  
-  </div>  
-</div> 
+    // 保存ボタンが押されたときの挙動
+    save.addEventListener("click", () => {
+      localStorage.setItem("memo", memo.value); // テキストをローカルストレージに保存
+      alert("保存しました"); // 保存完了のメッセージを表示
+    });
 
-    
-<p><div class="profile">  
-  <div class="left">  
-    <img src="images/sample.webp"/>  
-  </div>  
-  <div class="right">  
-    <strong>ホームページ太郎</strong>  
-    <p>こんにちは。ホームページ太郎です。</p>  
-    <p>私はホームページを作るのが趣味です。HTML/CSS/JavaScriptなどを扱えます。パソコン歴は20年です。</p>  
-    <p>最近の趣味は筋トレとサイクリングです。筋トレを始めてから身体の調子が良いですね。体重も落とすことができました。</p>  
-  </div>  
-</div> </p>
-    
-
-<div class="profile">  
-  <div class="left">  
-    <img src="images/sample.webp"/>  
-  </div>  
-  <div class="right">  
-    <strong>ホームページ太郎</strong>  
-    <p>こんにちは。ホームページ太郎です。</p>  
-    <p>私はホームページを作るのが趣味です。HTML/CSS/JavaScriptなどを扱えます。パソコン歴は20年です。</p>  
-    <p>最近の趣味は筋トレとサイクリングです。筋トレを始めてから身体の調子が良いですね。体重も落とすことができました。</p>  
-  </div>  
-</div>     
-
-
-</section>
-
-</main>
-
-</div>
-<!--/#contents-->
-
-<footer>
-<small>Copyright&copy; <a href="index.html">サイト名</a> All Rights Reserved.</small>
-<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
-</footer>
-
-<!--ページの上部へ戻るボタン-->
-<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
-
-</div>
-<!--/#container-->
-
-<!--jQueryの読み込み-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!--このテンプレート専用のスクリプト-->
-<script src="js/main.js"></script>
-
+    // 読み込みボタンが押されたときの挙動
+    load.addEventListener("click", () => {
+      memo.value = localStorage.getItem("memo"); // ローカルストレージからテキストを読み込み
+      alert("読み込みました"); // 読み込み完了のメッセージを表示
+    });
+  </script>
 </body>
 </html>

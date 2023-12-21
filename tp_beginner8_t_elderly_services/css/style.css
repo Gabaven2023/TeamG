@@ -453,7 +453,7 @@ footer .pr {display: block;}
 	cursor: pointer;
 }
 .btn:before {
-	content: 'OFF';
+	content: '';
 }
 .checkbox {
 	display: none;
@@ -463,6 +463,6 @@ footer .pr {display: block;}
 	background: #1ad33a;
 }
 .checkbox:checked+.btn:before {
-	content: 'ON';
+	content: '♥';
 }
 
