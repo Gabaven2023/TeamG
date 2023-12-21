@@ -398,108 +398,110 @@ footer .pr {display: block;}
 
 	}/*追加指定ここまで*/
 
-.calendar-wrap {
-  margin: 0 auto;
-  max-width: 1110px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
-}
-@media (max-width: 767.98px) {
-  .calendar-wrap {
-    display: flex;
-    flex-direction: column;
-  }
-}
-.calendar {
-  width: 100%;
-  border-collapse: collapse;
-}
-.calendar th,
-.calendar td {
-  border: 1px solid #000;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-  font-weight: bold;
-}
-.calendar th {
-  padding: 6px 10px;
-}
-.calendar td {}
-@media (max-width: 767.98px) {
-  .calendar th,
-  .calendar td {
-    padding: 6px;
-    font-size: 12px;
-  }
-  .calendar th {
-    padding: 3px 6px;
-  }
-}
+    .calendar-wrap {
+        margin: 0 auto;
+        max-width: 1110px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+      }
+      @media (max-width: 767.98px) {
+        .calendar-wrap {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      .calendar {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .calendar th,
+      .calendar td {
+        border: 1px solid #000;
+        text-align: center;
+        padding: 10px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .calendar th {
+        padding: 6px 10px;
+      }
+      .calendar td {}
+      @media (max-width: 767.98px) {
+        .calendar th,
+        .calendar td {
+          padding: 6px;
+          font-size: 12px;
+        }
+        .calendar th {
+          padding: 3px 6px;
+        }
+      }
+      
+      .calendar .sun {
+        color: #e17f7e;
+        background-color: #f8e4e2;
+      }
+      .calendar .sat {
+        color: #7ab6f3;
+        background-color: #e7f6fd;
+      }
+      .calendar .mute {
+        color: #aaa;
+      }
+      .calendar .today {
+        background-color: #7d7d7d;
+      }
+      .calendar .off {
+        background-color: #fadcdb;
+      }
+      
+      button {
+          /* ブラウザ特有のスタイルを無効に */
+          -moz-appearance: none;
+          -webkit-appearance: none;
+          appearance: none;
+        
+          /* 整える */
+          margin: 1em 0; /* 前後の隙間 */
+          padding: 0.6em 1em; /* 塗りの余白 */
+          font-size: 1em; /* フォントサイズ */
+          background-color: #fff; /* 背景色 */
+          color: #000; /* テキストカラー */
+          cursor: pointer; /* カーソルを指マークに */
+          border-radius: 3px; /* 角の丸み */
+          border: 0; /* 枠線を消す */
+          transition: 0.3s; /* ホバーの変化を滑らかに */
+        }
+        
+        /* ホバー時（カーソルをのせた時）の見た目 */
+        button:hover {
+          background-color: #064fda; /* 背景色 */
+        }
+      
+        .clicktxt {
+          color:#ffffff;
+          background-color: #4169e1;
+          padding:15px;
+          border-radius: 10px;
+          }
+          
+          .switchdsp input {
+          display: none;
+          }
+          
+          .switchdsp .dsp {
+          padding: 0px 10px 0px 10px;
+          height: 0;
+          overflow: hidden;
+          transition: 0.9s;
+          opacity: 0;
+          }
+          
+          .switchdsp input:checked ~ .dsp {
+          padding: 0px 25px 0px 25px;
+          height: auto;
+          opacity: 1;
+          }
 
-.calendar .sun {
-  color: #e17f7e;
-  background-color: #f8e4e2;
-}
-.calendar .sat {
-  color: #7ab6f3;
-  background-color: #e7f6fd;
-}
-.calendar .mute {
-  color: #aaa;
-}
-.calendar .today {
-  background-color: #7d7d7d;
-}
-.calendar .off {
-  background-color: #fadcdb;
-}
-
-button {
-	/* ブラウザ特有のスタイルを無効に */
-	-moz-appearance: none;
-	-webkit-appearance: none;
-	appearance: none;
   
-	/* 整える */
-	margin: 1em 0; /* 前後の隙間 */
-	padding: 0.6em 1em; /* 塗りの余白 */
-	font-size: 1em; /* フォントサイズ */
-	background-color: #fff; /* 背景色 */
-	color: #000; /* テキストカラー */
-	cursor: pointer; /* カーソルを指マークに */
-	border-radius: 3px; /* 角の丸み */
-	border: 0; /* 枠線を消す */
-	transition: 0.3s; /* ホバーの変化を滑らかに */
-  }
-  
-  /* ホバー時（カーソルをのせた時）の見た目 */
-  button:hover {
-	background-color: #064fda; /* 背景色 */
-  }
-
-  .clicktxt {
-	color:#ffffff;
-	background-color: #4169e1;
-	padding:15px;
-	border-radius: 10px;
-	}
-	
-	.switchdsp input {
-	display: none;
-	}
-	
-	.switchdsp .dsp {
-	padding: 0px 10px 0px 10px;
-	height: 0;
-	overflow: hidden;
-	transition: 0.9s;
-	opacity: 0;
-	}
-	
-	.switchdsp input:checked ~ .dsp {
-	padding: 0px 25px 0px 25px;
-	height: auto;
-	opacity: 1;
-	}
