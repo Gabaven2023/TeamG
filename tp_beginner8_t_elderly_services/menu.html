@@ -34,69 +34,45 @@
 
 <section>
 
-<h2>サービス紹介</h2>
+<h2>他の人の取り組み</h2>
 
-<div class="list-simple">
-<figure><img src="images/1.jpg" alt=""></figure>
-<h3>ｇ班</h3>
-<p>ここに説明などを入れます。</p>
-</div>
 
-<div class="list-simple">
-<figure><img src="images/2.jpg" alt=""></figure>
-<h3>ここはタイトル</h3>
-<p>ここに説明などを入れます。</p>
-</div>
+    
 
-<div class="list-simple">
-<figure><img src="images/3.jpg" alt=""></figure>
-<h3>ここはタイトル</h3>
-<p>ここに説明などを入れます。</p>
-</div>
+    
+    
+    
+<style>
+    /* CSSでデザインを整える */
+    textarea {
+      width: 100%;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <!-- テキストエリアとボタンを作成 -->
+  <textarea id="memo"></textarea>
+  <button id="save">保存</button>
+  <button id="load">読み込み</button>
 
-<div class="list-simple">
-<h3>ここはタイトル</h3>
-<p>画像を使わない場合はこんな感じ</p>
-</div>
+  <script>
+    // テキストエリアとボタンの要素を取得
+    const memo = document.getElementById("memo");
+    const save = document.getElementById("save");
+    const load = document.getElementById("load");
 
-<div class="list-simple">
-<h3>ここはタイトル</h3>
-<p>画像を使わない場合はこんな感じ</p>
-</div>
+    // 保存ボタンが押されたときの挙動
+    save.addEventListener("click", () => {
+      localStorage.setItem("memo", memo.value); // テキストをローカルストレージに保存
+      alert("保存しました"); // 保存完了のメッセージを表示
+    });
 
-<div class="list-simple">
-<h3>ここはタイトル</h3>
-<p>画像を使わない場合はこんな感じ</p>
-</div>
-
-<div class="list-simple">
-<h3>ここはタイトル</h3>
-<p>画像を使わない場合はこんな感じ</p>
-</div>
-
-</section>
-
-</main>
-
-</div>
-<!--/#contents-->
-
-<footer>
-<small>Copyright&copy; <a href="index.html">サイト名</a> All Rights Reserved.</small>
-<span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
-</footer>
-
-<!--ページの上部へ戻るボタン-->
-<div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
-
-</div>
-<!--/#container-->
-
-<!--jQueryの読み込み-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
-<!--このテンプレート専用のスクリプト-->
-<script src="js/main.js"></script>
-
+    // 読み込みボタンが押されたときの挙動
+    load.addEventListener("click", () => {
+      memo.value = localStorage.getItem("memo"); // ローカルストレージからテキストを読み込み
+      alert("読み込みました"); // 読み込み完了のメッセージを表示
+    });
+  </script>
 </body>
 </html>
