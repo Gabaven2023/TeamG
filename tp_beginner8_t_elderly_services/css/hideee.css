@@ -15,6 +15,7 @@
 @import url("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");
 
 
+
 /*テーマカラーの定義（CSS変数）
 ここのカラーコードを変更するだけで、テンプレートのテーマカラーが変わります。
 ---------------------------------------------------------------------------*/
@@ -397,3 +398,74 @@ footer .pr {display: block;}
 
 	}/*追加指定ここまで*/
 
+
+＜自分＞追記
+main {
+	padding: 5%;	/*ブロック内の余白*/
+}
+main h2 {
+	font-size: 1.8rem;		/*文字サイズ*/
+	text-align: center;		/*テキストをセンタリング*/
+	letter-spacing: 0.2em;	/*文字間隔を広くする指定*/
+	color:#000080;	/*文字色。css冒頭で指定しているテーマカラーを読み込みます*/
+}
+
+/*mainブロック内のh3*/
+
+
+/**mainブロック内のpタグ*/
+main p {
+	margin: 1rem;	/*pの外側にとるスペース*/
+}
+
+main h3 {
+    font-size: 1.8rem;		/*文字サイズ*/
+    text-align: center;		/*テキストをセンタリング*/
+    letter-spacing: 0.2em;	/*文字間隔を広くする指定*/
+    color:#000080;	/*文字色。css冒頭で指定しているテーマカラーを読み込みます*/
+}
+
+main h4 {
+    font-size: 1.8rem;		/*文字サイズ*/
+    text-align: center;		/*テキストをセンタリング*/
+    letter-spacing: 0.2em;	/*文字間隔を広くする指定*/
+    color:#000080;	/*文字色。css冒頭で指定しているテーマカラーを読み込みます*/
+}
+
+main h5 {
+    font-size: 1.8rem;		/*文字サイズ*/
+    text-align: center;		/*テキストをセンタリング*/
+    letter-spacing: 0.2em;	/*文字間隔を広くする指定*/
+    color:#000080;	/*文字色。css冒頭で指定しているテーマカラーを読み込みます*/
+}
+
+main h6 {
+    font-size: 1.8rem;		/*文字サイズ*/
+    text-align: center;		/*テキストをセンタリング*/
+    letter-spacing: 0.2em;	/*文字間隔を広くする指定*/
+    color:#000080;	/*文字色。css冒頭で指定しているテーマカラーを読み込みます*/
+}
+
+main h10 {
+    font-size: 1.8rem;		/*文字サイズ*/
+    text-align: left;		/*テキストをセンタリング*/
+    letter-spacing: 0.2em;	/*文字間隔を広くする指定*/
+    color:#000080 ;	/*文字色。css冒頭で指定しているテーマカラーを読み込みます*/
+}
+
+main h12 {font-size: 1.8rem;		/*文字サイズ*/
+    text-align:left;	/*テキストをセンタリング*/
+    letter-spacing: 0.2em;	/*文字間隔を広くする指定*/
+    color:#000080 ;	
+}
+
+main h14 {font-size: 1.8rem;		/*文字サイズ*/
+    text-align: left;		/*テキストをセンタリング*/
+    letter-spacing: 0.2em;	/*文字間隔を広くする指定*/
+    color:#000080 ;	
+}
+
+main h11{
+    width:300px;
+    height: auto;
+}
