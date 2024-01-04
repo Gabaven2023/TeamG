@@ -15,6 +15,7 @@
 @import url("https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css");
 
 
+
 /*テーマカラーの定義（CSS変数）
 ここのカラーコードを変更するだけで、テンプレートのテーマカラーが変わります。
 ---------------------------------------------------------------------------*/
@@ -57,7 +58,7 @@ nav {margin: 0;padding: 0;}
 table {border-collapse:collapse;}
 
 /*画像全般の設定*/
-img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+/* img {border: none;max-width: 100%;height: auto;vertical-align: middle;} */
 
 /*videoタグ*/
 video {max-width: 100%;}
@@ -213,7 +214,7 @@ main h2 {
 	font-size: 1.8rem;		/*文字サイズ*/
 	text-align: center;		/*テキストをセンタリング*/
 	letter-spacing: 0.2em;	/*文字間隔を広くする指定*/
-	color:var(--primary-color);	/*文字色。css冒頭で指定しているテーマカラーを読み込みます*/
+	color: var(--primary-color);	/*文字色。css冒頭で指定しているテーマカラーを読み込みます*/
 }
 
 /*mainブロック内のh3*/
@@ -397,3 +398,7 @@ footer .pr {display: block;}
 
 	}/*追加指定ここまで*/
 
+/* 画面幅の50%の幅で画像を表示 */
+.image-vw {
+	/* width : 25vw ;  */
+  }
