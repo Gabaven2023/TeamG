@@ -5,7 +5,7 @@
 <title>初心者向けホームページテンプレート tp_beginner8</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="ここにサイト説明を入れます">
-<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/maki.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
 <nav>
 <ul>
 <li><a href="index.html">ホーム</a></li>
-<li><a href="greeting.html">ご挨拶</a></li>
+<li><a href="greeting.html">記録</a></li>
 <li><a href="menu.html">サービス紹介</a></li>
 <li><a href="access.html">アクセス</a></li>
 </ul>
@@ -34,37 +34,133 @@
 
 <section>
 
-<h2>ご挨拶</h2>
+<h2>カレンダ</h2>
 
 <div class="mb30"><img src="images/greeting.jpg" alt=""></div>
 
-<p class="c">ここに挨拶文を書きます。サンプルテキスト。<br>
-ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。サンプルテキスト。<br>
-ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。サンプルテキスト。</p>
-
-<p class="c">ここに挨拶文を書きます。<br>
-ここに挨拶文を書きます。サンプルテキスト。<br>
-ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。<br>
-ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。<br>
-ここに挨拶文を書きます。サンプルテキスト。<br>
-</p>
-
-<p class="c">ここに挨拶文を書きます。サンプルテキスト。<br>
-ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。サンプルテキスト。<br>
-ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。サンプルテキスト。</p>
-
-<p class="c">ここに挨拶文を書きます。<br>
-ここに挨拶文を書きます。サンプルテキスト。<br>
-ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。<br>
-ここに挨拶文を書きます。サンプルテキスト。ここに挨拶文を書きます。<br>
-ここに挨拶文を書きます。サンプルテキスト。<br>
-</p>
-
-</section>
-
-</main>
-
+<div class="calendar-wrap">
+    <table class="calendar">
+      <thead>
+        <tr>
+          <th class="sun">Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th class="sat">Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mute">29</td>
+          <td class="mute">30</td>
+          <td><button type="button">1</button></td>
+          <td><button type="button">2</button></td>
+          <td><button type="button">3</button></td>
+          <td><button type="button">4</button></td>
+          <td><button type="button">5</button></td>
+        </tr>
+        <tr>
+          <td><button type="button">6</button></td>
+          <td><button type="button">7</button></td>
+          <td><button type="button">8</button></td>
+          <td><button type="button">9</button></td>
+          <td><button type="button">10</button></td>
+          <td><button type="button">11</button></td>
+          <td><button type="button">12</button></td>
+        </tr>
+        <tr>
+          <td class="today"><button type="button">13</button></td>
+          <td><button type="button">14</button></td>
+          <td><button type="button">15</button></td>
+          <td><button type="button">16</button></td>
+          <td><button type="button">17</button></td>
+          <td><button type="button">18</button></td>
+          <td><button type="button">19</button></td>
+        </tr>
+        <tr>
+          <td><button type="button">20</button></td>
+          <td><button type="button">21</button></td>
+          <td><button type="button">22</button></td>
+          <td><button type="button">23</button></td>
+          <td><button type="button">24</button></td>
+          <td><button type="button">25</button></td>
+          <td><button type="button">26</button></td>
+        </tr>
+        <tr>
+          <td><button type="button">27</button></td>
+          <td><button type="button">28</button></td>
+          <td><button type="button">29</button></td>
+          <td><button type="button">30</button></td>
+          <td><button type="button">31</button></td>
+          <td class="mute">1</td>
+          <td class="mute">2</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="calendar">
+      <thead>
+        <tr>
+          <th class="sun">Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th class="sat">Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mute">27</td>
+          <td class="mute">28</td>
+          <td class="mute">29</td>
+          <td class="mute">30</td>
+          <td class="mute">31</td>
+          <td>1</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="off">4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+        </tr>
+        <tr>
+          <td class="today">10</td>
+          <td class="off">11</td>
+          <td>12</td>
+          <td>13</td>
+          <td>14</td>
+          <td>15</td>
+          <td>16</td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td class="off">18</td>
+          <td>19</td>
+          <td>20</td>
+          <td>21</td>
+          <td>22</td>
+          <td>23</td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td class="off">25</td>
+          <td>26</td>
+          <td>27</td>
+          <td>28</td>
+          <td>29</td>
+          <td>30</td>
+        </tr>
+      </tbody>
+    </table>
 </div>
+
 <!--/#contents-->
 
 <footer>
