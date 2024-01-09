@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>初心者向けホームページテンプレート tp_beginner8</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ここにサイト説明を入れます">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* CSSでデザインを整える */
+        textarea {
+            width: 100%;
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+
+<header>
+    <h1 id="logo"><a href="greeting.html"><img src="images/ホーム移行.png" alt="SAMPLE LOGO"></a></h1>
+</header>
+
+<div id="menubar">
+    <nav>
+        <ul>
+            <li><a href="greeting.html">カレンダー</a></li>
+            <li><a href="menu.html">つぶやき</a></li>
+            <li><a href="about.html">URL登録</a></li>
+            <li><a href="access.html">次なる挑戦</a></li>
+        </ul>
+    </nav>
+</div>
+<!--/#menubar-->
+
+<body>
+    <main>
+
+        <h2>URL枠の購入</h2>
+
+        <div id="content">
+            <div class="pay-form-flex">
+
+                <div>
+                    <p><strong>お名前</strong></p>
+                    <div>
+                        <input id="name" autocomplete="name" type="text" maxlength="80" placeholder="山田太郎">
+                        <p class="err-name" hidden="true">お名前が入力されていません</p>
+                    </div>
+                </div>
+
+                <br>
+                <div>
+                    <p><strong>メールアドレス</strong></p>
+                    <div>
+                        <input autocomplete="email" type="text" maxlength="80" placeholder="zibun@gmail.com">
+                        <p class="err-email" hidden="true">メールアドレスをご確認ください</p>
+                    </div>
+                </div>
+
+                
+                <br>
+                <div>
+                    <p><strong>金額</strong></p>
+                    <div>
+                        <ul>
+                            <li>
+                                <input type="radio" class="tamaradio" name="price" value="1000">
+                                <label>1枠 ¥100</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="tamaradio" name="price" value="3000" checked="checked">
+                                <label>5枠 ¥400</label>
+                            </li>
+                            <li>
+                                <input type="radio" class="tamaradio" name="price" value="10000">
+                                <label>10枠 ¥700</label>
+                            </li>
+                        </ul>
+                        <p hidden="true">セキュリティコードが入力されていません</p>
+                        <p hidden="true">¥1,000から受け付けております。</p>
+                    </div>
+                </div>
+
+                
+                <br>
+                <div>
+                    <p><strong>カード情報</strong></p>
+                    <div>
+                        <input autocomplete="cc-number" type="text" maxlength="20" placeholder="1234 5678 1234 5678"
+                            inputmode="numeric">
+                        <div class="multi-values-wrapper">
+                            <div>
+                                <select autocomplete="cc-exp-month" required>
+                                    <option value="" selected="selected">月</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select autocomplete="cc-exp-year" required>
+                                    <option value=""  selected="selected">年</option>
+                                    <option value="22">2022</option>
+                                    <option value="23">2023</option>
+                                    <option value="24">2024</option>
+                                    <option value="25">2025</option>
+                                    <option value="26">2026</option>
+                                    <option value="27">2027</option>
+                                    <option value="28">2028</option>
+                                    <option value="29">2029</option>
+                                    <option value="30">2030</option>
+                                    <option value="31">2031</option>
+                                    <option value="32">2032</option>
+                                </select>
+                            </div>
+                            <input autocomplete="cc-csc" type="text" placeholder="123" inputmode="numeric"
+                                maxlength="4">
+                        </div>
+                    </div>
+                </div>
+
+                
+                <br>
+                <div>
+                    <p><strong>カード名義</strong></p>
+                    <div>
+                        <input autocomplete="cc-given-name" type="text" maxlength="100" placeholder="TARO">
+                        <input autocomplete="cc-family-name" type="text" maxlength="100" placeholder="YAMADA">
+                    </div>
+                </div>
+
+                <form action="donate-pay-process.php" method="POST">
+
+                    <br><br>
+                    <a class="buttonRound" type="button" value="送信する" onclick="doPurchase()">購入する</a>
+                </form>
+
+            </div>
+    </main>
+
+    <footer>
+        <small>Copyright&copy; <a href="index.html">サイト名</a> All Rights Reserved.</small>
+        <span class="pr"><a href="https://template-party.com/" target="_blank">《Web
+                Design:Template-Party》</a></span>
+    </footer>
+    <!--ページの上部へ戻るボタン-->
+    <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+
+
+</body>
+
+
+</html>
