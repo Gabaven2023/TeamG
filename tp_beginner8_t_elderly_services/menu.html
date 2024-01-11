@@ -37,7 +37,7 @@
         <nav>
           <ul>
             <li><a href="greeting.html">カレンダー</a></li>
-            <li><a href="menu.html">つぶやき</a></li>
+            <li><a href="menu.html">つぶやき日記</a></li>
             <li><a href="about.html">URL登録</a></li>
             <li><a href="access.html">次なる挑戦</a></li>
           </ul>
@@ -50,7 +50,7 @@
         <section>
 
 
-<h2>他の人の取り組み</h2>
+<h2>つぶやき日記</h2>
     
 <style>
     /* CSSでデザインを整える */
@@ -58,13 +58,18 @@
       width: 100%;
       height: 50px;
     }
+    
+    button{
+        width: 100%;
+    }
+    
   </style>
 </head>
 <body>
   <!-- テキストエリアとボタンを作成 -->
   <textarea id="memo"></textarea>
-  <button id="save">保存</button>
-  <button id="load">読み込み</button>
+  <button id="save">つぶやく</button>
+  <button id="load">読み込む</button>
 
   <script>
     // テキストエリアとボタンの要素を取得
@@ -75,7 +80,7 @@
     // 保存ボタンが押されたときの挙動
     save.addEventListener("click", () => {
       localStorage.setItem("memo", memo.value); // テキストをローカルストレージに保存
-      alert("保存しました"); // 保存完了のメッセージを表示
+      alert("つぶやきました"); // 保存完了のメッセージを表示
     });
 
     // 読み込みボタンが押されたときの挙動
@@ -85,8 +90,8 @@
     });
   </script>
     
-<p>《メモ機能の説明》</p>
-<p>目標や達成したことなどを一時的に保存できます。</p>
+<p>自分のつぶやきを保存できます。</p>
+<p>保存したつぶやきは読み込むボタンから読み込むことができます。</p>
     
 </body>
 </html>
