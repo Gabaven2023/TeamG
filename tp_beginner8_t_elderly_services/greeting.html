@@ -3,10 +3,36 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Let's Go My Way</title>
+  <title>初心者向けホームページテンプレート tp_beginner8</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="ここにサイト説明を入れます">
   <link rel="stylesheet" href="css/maki.css">
+
+  <style>/* layout */
+    #contain {
+    width: 790px;
+    background: #FFF;
+    margin: 0 auto;
+    padding: 0 10px; /* 左右にpaddingを10pxいれる */
+    }
+    #wrapper {
+      overflow: hidden;
+      margin-right: -20px;
+      /* 一番右端の余分な20pxを削除。削除しないとカラム落ちする。 */
+    }
+
+    .flowers {
+      width: 250px;
+      margin-right: 20px;
+      /* 画像同士の余白は20px */
+      float: left;
+    }
+
+    .flowers p {
+      line-height: 1.2;
+      margin: 10px 0;
+    }
+  </style>
 
 </head>
 
@@ -17,15 +43,15 @@
     <div id="contents">
 
       <header>
-        <h1 id="logo"><a href="greeting.html"><img src="images/ホーム移行.png" alt="SAMPLE LOGO"></a></h1>
+        <h1 id="logo"><a href="about.html"><img src="images/ホーム移行.png" alt="SAMPLE LOGO"></a></h1>
       </header>
 
       <div id="menubar">
         <nav>
           <ul>
-            <li><a href="greeting.html">カレンダー</a></li>
-            <li><a href="menu.html">つぶやき日記</a></li>
             <li><a href="about.html">URL登録</a></li>
+            <li><a href="greeting.html">カレンダー</a></li>
+            <li><a href="menu.html">つぶやき</a></li>
             <li><a href="access.html">次なる挑戦</a></li>
           </ul>
         </nav>
@@ -38,7 +64,7 @@
 
           <h2>カレンダー</h2>
 
-          <div class="calendar-wrap">
+          <div>
 
             <div style="text-align:center;">
 
@@ -51,114 +77,153 @@
               </tablecenter>
             </div>
 
+            <br>
 
-            <h3>2024年 1月</h3>
-            <table class="calendar">
-              <thead>
-                <tr>
-                  <th class="sun">Sun</th>
-                  <th>Mon</th>
-                  <th>Tue</th>
-                  <th>Wed</th>
-                  <th>Thu</th>
-                  <th>Fri</th>
-                  <th class="sat">Sat</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td class="mute">31</td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/maru.jpg" height=100 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                </tr>
-                <tr>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/maru.jpg" height=100 width=45 /></td>
-                  <td><img src="images/maru.jpg" height=100 width=45 /></td>
-                  <td><button type="button">10</button></td>
-                  <td><img src="images/maru.jpg" height=100 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                </tr>
-                <tr>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><button type="button">15</button></td>
-                  <td><img src="images/maru.jpg" height=100 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/maru.jpg" height=100 width=45 /></td>
-                </tr>
-                <tr>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
-                  <td><button type="button">23</button></td>
-                  <td class="task0"><img src="images/maru.jpg" height=100 width=45 /></td>
-                  <td class="task1" style="display: none"><img src="images/maru.jpg" height=100 width=45 /></td>
-                  <td class="task2" style="display: none"><img src="images/hanamaru.jpg" height=100 width=45 /></td>
-                  <td class="today">25
-                  </td>
-                  <td><button type="button">26</button></td>
-                  <td><button type="button">27</button></td>
-                </tr>
-                <tr>
-                  <td><button type="button">28</button></td>
-                  <td><button type="button">29</button></td>
-                  <td><button type="button">30</button></td>
-                  <td><button type="button">31</button></td>
-                  <td class="mute">1</td>
-                  <td class="mute">2</td>
-                  <td class="mute">3</td>
-                </tr>
-              </tbody>
-            </table>
+            <tablecenter>
+              <tr>
+                <td><img src="images/1 (2).jpg" width="30%" /></td>
+                <td><img src="images/1.png" width="30%" /></td>
+                <td><img src="images/1 (1).jpg" width="30%" /></td>
+              </tr>
+            </tablecenter>
+
+
+
+              <div class="bd-example-snippet bd-code-snippet">
+                <div class="bd-example m-0 border-0">
+                  <div class="progress-stacked">
+                    <div class="progress" role="progressbar" aria-label="Segment two - animated striped success example"
+                      style="width: 30%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                      <div class="progress-bar progress-bar-striped progress-bar-animated theama"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h3>2024年 1月</h3>
+              <table class="calendar">
+                <thead>
+                  <tr>
+                    <th class="sun">Sun</th>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th class="sat">Sat</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mute">31</td>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                    <td><img src="images/maru.jpg" height=100 width=45 /></td>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                    <td><img src="images/maru.jpg" height=100 width=45 /></td>
+                    <td><img src="images/maru.jpg" height=100 width=45 /></td>
+                    <td><button type="button">10</button></td>
+                    <td><img src="images/maru.jpg" height=100 width=45 /></td>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                  </tr>
+                  <tr>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                    <td><button type="button">15</button></td>
+                    <td><img src="images/maru.jpg" height=100 width=45 /></td>
+                    <td><img src="images/hanamaru.jpg" height=33 width=45 /></td>
+                    <td class="task1" style="display: none"><img src="images/maru.jpg" height=100 width=45 /></td>
+                    <td class="task2" style="display: none"><img src="images/hanamaru.jpg" height=100 width=45 /></td>
+                    <td class="today">18</td>
+                    <td><button type="button">19</button></td>
+                    <td><button type="button">20</button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button">21</button></td>
+                    <td><button type="button">22</button></td>
+                    <td><button type="button">23</button></td>
+                    <td><button type="button">24</button></td>
+                    <td><button type="button">25</button></td>
+                    <td><button type="button">26</button></td>
+                    <td><button type="button">27</button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button">28</button></td>
+                    <td><button type="button">29</button></td>
+                    <td><button type="button">30</button></td>
+                    <td><button type="button">31</button></td>
+                    <td class="mute">1</td>
+                    <td class="mute">2</td>
+                    <td class="mute">3</td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <!--/#contents-->
+            <span style="padding: 5px"></span>
 
           </div>
+          <!--/#container-->
 
-          <!--/#contents-->
-          <span style="padding: 5px"></span>
+          <footer>
+            <small>Copyright&copy; <a href="index.html">サイト名</a> All Rights Reserved.</small>
+            <span class="pr"><a href="https://template-party.com/" target="_blank">《Web
+                Design:Template-Party》</a></span>
+          </footer>
 
-    </div>
-    <!--/#container-->
-
-    <footer>
-      <small>Copyright&copy; <a href="index.html">サイト名</a> All Rights Reserved.</small>
-      <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
-    </footer>
-
-    <!--ページの上部へ戻るボタン-->
-    <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
+          <!--ページの上部へ戻るボタン-->
+          <div class="pagetop"><a href="#"><i class="fas fa-angle-double-up"></i></a></div>
 
 
-    <!--jQueryの読み込み-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+          <!--jQueryの読み込み-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
-    <!--このテンプレート専用のスクリプト-->
-    <script src="js/main.js"></script>
+          <!--このテンプレート専用のスクリプト-->
+          <script src="js/main.js"></script>
 
-    <script>
-      function hello1() {
-        let element1 = document.querySelector(".task1");
-        element1.style.display = "";
-        let element2 = document.querySelector(".task2");
-        element2.style.display = "none";
-        let element3 = document.querySelector(".today");
-        element3.style.display = "none";
-      }
+          <script>
+            function hello1() {
+              let element1 = document.querySelector(".task1");
+              element1.style.display = "";
+              let element2 = document.querySelector(".task2");
+              element2.style.display = "none";
+              let element3 = document.querySelector(".today");
+              element3.style.display = "none";
 
-      function hello2() {
-        let element1 = document.querySelector(".task1");
-        element1.style.display = "none";
-        let element2 = document.querySelector(".task2");
-        element2.style.display = "";
-        let element3 = document.querySelector(".today");
-        element3.style.display = "none";
-      }
-    </script>
+              let progressbar = document.querySelector(".progress");
+              let progress = progressbar.style.width;
+              let progress_value = progress.replace("%", "");
+              let value = Number(progress_value);
+              value += 10;
+              console.log(value);
+              progressbar.style.width = String(value) + "%";
+
+            }
+
+            function hello2() {
+              let element1 = document.querySelector(".task1");
+              element1.style.display = "none";
+              let element2 = document.querySelector(".task2");
+              element2.style.display = "";
+              let element3 = document.querySelector(".today");
+              element3.style.display = "none";
+
+              let progressbar = document.querySelector(".progress");
+              let progress = progressbar.style.width;
+              let progress_value = progress.replace("%", "");
+              let value = Number(progress_value);
+              value += 20;
+              console.log(value);
+              progressbar.style.width = String(value) + "%";
+            }
+          </script>
 
 </body>
 
