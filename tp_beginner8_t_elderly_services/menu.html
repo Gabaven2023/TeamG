@@ -51,106 +51,47 @@
 
           <h2>つぶやく</h2>
 
-          <body>
+            
+          <style>
+    /* CSSでデザインを整える */
+    textarea {
+      width: 100%;
+      height: 50px;
+    }
+    
+    button{
+        width: 100%;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- テキストエリアとボタンを作成 -->
+  <textarea id="memo"></textarea>
+  <button id="save">つぶやく</button>
+  <button id="load">読み込む</button>
 
-            <ul id="task-list" style="text-align: center">
-              <!-- タスクがここに追加されます -->
-              <li>
-                よっしゃやるぞ-！って何回目！
-              </li>
-              <li>
-                お正月でさすがに食べ過ぎたから、本気でできた。
-              </li>
-              <li>
-                やっただけえらい。よくやった。
-              </li>
-              <li>
-                昨日しなかったけど今日やった！セーフ。
-              </li>
-              <li>
-                三日連続花丸。友達に話したのがでかい。
-              </li>
-              <li>
-                昨日は旅行だったからしゃーなし。今日グッド！
-              </li>
-              <li>
-                一ヶ月まであとちょっと・・・！！
-              </li>
-            </ul>
+  <script>
+    // テキストエリアとボタンの要素を取得
+    const memo = document.getElementById("memo");
+    const save = document.getElementById("save");
+    const load = document.getElementById("load");
 
-            <br>
-            <div style="text-align:right;">
-              <input type="text" id="task-text" placeholder="新しいタスクを入力">
-              <br><br>
-              <button style="display: inline-block;" class="buttonRound" id="add-task">つぶやく</button>
-            </div>
+    // 保存ボタンが押されたときの挙動
+    save.addEventListener("click", () => {
+      localStorage.setItem("memo", memo.value); // テキストをローカルストレージに保存
+      alert("つぶやきました"); // 保存完了のメッセージを表示
+    });
 
-            <script>
-              document.getElementById('add-task').addEventListener('click', function () {
-
-                // 入力フィールドから新しいタスクのテキストを取得
-                const taskText = document.getElementById('task-text').value;
-                if (taskText) {
-
-                  // タスクを表示するul要素を取得
-                  const taskList = document.getElementById('task-list');
-
-                  // 新しいタスクを表示するli要素を作成
-                  const taskItem = document.createElement('li');
-
-                  taskItem.textContent = taskText;
-                  taskList.appendChild(taskItem);
-                  // 新しいタスクを追加した後、入力フィールドをクリア
-                  document.getElementById('task-text').value = '';
-                }
-              });
-
-              // ページ読み込み時にローカルストレージからタスクを取得
-              window.onload = function () {
-                // ローカルストレージから保存されたタスクを取得
-                const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-                // タスクを表示するul要素を取得
-                const taskList = document.getElementById("task-list");
-
-                // 保存されたタスクをリストに追加
-                savedTasks.forEach(function (taskText) {
-                  const taskItem = document.createElement("li");
-                  taskItem.textContent = taskText;
-                  taskList.appendChild(taskItem);
-                });
-              };
-
-              // "追加"ボタンがクリックされたときの処理
-              document.getElementById("add-task").addEventListener("click", function () {
-                // 入力フィールドから新しいタスクのテキストを取得
-                const taskText = document.getElementById("task-text").value;
-                if (taskText) {
-                  // タスクを表示するul要素を取得
-                  const taskList = document.getElementById("task-list");
-
-                  // 新しいタスクを表示するli要素を作成
-                  const taskItem = document.createElement("li");
-                  taskItem.textContent = taskText;
-
-                  // リストに新しいタスクを追加
-                  taskList.appendChild(taskItem);
-
-                  // ローカルストレージから保存されたタスクを取得
-                  const savedTasks = JSON.parse(localStorage.getItem("tasks")) || [];
-
-                  // 新しいタスクを保存されたタスクの配列に追加
-                  savedTasks.push(taskText);
-
-                  // ローカルストレージに保存
-                  localStorage.setItem("tasks", JSON.stringify(savedTasks));
-
-                  // 新しいタスクを追加した後、入力フィールドをクリア
-                  document.getElementById("task-text").value = "";
-                }
-              });
-            </script>
-          </body>
-
-
+    // 読み込みボタンが押されたときの挙動
+    load.addEventListener("click", () => {
+      memo.value = localStorage.getItem("memo"); // ローカルストレージからテキストを読み込み
+      alert("読み込みました"); // 読み込み完了のメッセージを表示
+    });
+  </script>
+    
+<p>自分のつぶやきを保存できます。</p>
+<p>保存したつぶやきは読み込むボタンから読み込むことができます。</p>
+    
+</body>
 </html>
